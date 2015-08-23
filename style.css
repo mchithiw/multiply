@@ -43,3 +43,7 @@ body{
 .first-cell{
 	font-weight: bold;
 }
+
+.header-color{
+	display: block;
+}

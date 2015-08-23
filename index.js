@@ -69,11 +69,24 @@ $(function() {
 		var xmax = $(".x-max").val();
 		var ymin = $(".y-min").val();
 		var ymax = $(".y-max").val();
+		var border = $(".border").val();
+		var color = $(".header-color").val();
 
 		xmin = xmin.replace(/[^.0-9]/g,'');
 		xmax = xmax.replace(/[^.0-9]/g,'');
 		ymin = ymin.replace(/[^.0-9]/g,'');
 		ymax = ymax.replace(/[^.0-9]/g,'');
+
+		if (color !== "")
+			$(".header").css("background-color", "" + color + "");
+
+		if (border !== "")
+			border = border + "px solid silver";
+
+		if (border !== "")
+			$(".mult-table tr").css("border", "" + border + "");
+
+
 
 
 		if (xmin !== "")
@@ -203,6 +216,9 @@ $(function() {
 		$("input").val("");
 		$("input").css("border", "1px solid silver");
 		makeTable(1, 10, 1, 11);
+
+		$(".mult-table tr").css("border", "none");
+		$(".header").css("background-color", "#13444F");
 
 	});
 
